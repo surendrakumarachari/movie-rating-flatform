@@ -29,9 +29,4 @@
   1) git remote add origin https://github.com/surendrakumarachari/movie-rating-flatform.git
   2) git add ./
   3) git commit -m update 
-  4) git push origin 
-
-
-
-
-
+  4) git push origin
