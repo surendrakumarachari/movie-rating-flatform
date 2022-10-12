@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Oct 09, 2022 at 05:03 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 7.4.29
+-- Host: 127.0.0.1
+-- Generation Time: Oct 12, 2022 at 02:49 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -46,7 +46,8 @@ INSERT INTO `movie` (`name`, `year`, `rating`, `genre`, `sl`, `url`, `language`)
 ('spider man ', '2001-12-22', 0, 'Action', 2, 'https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Spider-Man_PS4_cover.jpg/220px-Spider-Man_PS4_cover.jpg', 'English'),
 ('Avengers', '2001-06-06', 0, 'Adventure', 9, 'https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_FMjpg_UX1000_.jpg', 'English'),
 ('RRR', '2022-06-06', 0, 'Drama', 10, 'https://stat2.bollywoodhungama.in/wp-content/uploads/2019/03/RRR-2022-306x393.jpeg', 'Telugu'),
-('Conjuring', '2006-11-14', 0, 'Horror', 33, 'https://images.squarespace-cdn.com/content/v1/511eea22e4b06642027a9a99/1473717135106-6WRDQJ3A6DBGMP2O938T/The+Conjuring+2.jpg', 'English');
+('Conjuring', '2006-11-14', 0, 'Horror', 33, 'https://images.squarespace-cdn.com/content/v1/511eea22e4b06642027a9a99/1473717135106-6WRDQJ3A6DBGMP2O938T/The+Conjuring+2.jpg', 'English'),
+('khaidi no 150', '7778-05-04', 0, 'comedy', 34, 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYVFBcVFRUXGBcaGxsXGhsYGxcaGhohGxoaGBobGhsbICwkGx0pIBsaJjYlKS4wMzMzGiI5PjkyPSwyMzABCwsLEA4QHRISHjIpIikyMjIwMjIyMjIyMjAyNDIyNDIyMjIyMjAyMjQyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIAOEA4QMBIgACEQE', 'telugu');
 
 -- --------------------------------------------------------
 
@@ -74,7 +75,8 @@ INSERT INTO `review` (`sl`, `movie_id`, `user_id`, `user_role`, `rating`, `value
 (10, 9, 'raju@gmail.com', 0, 6, 'good movie'),
 (18, 2, 'raju@gmail.com', 0, 7, 'very good movie'),
 (24, 1, 'raju@gmail.com', 0, 8, 'good'),
-(26, 33, 'raju@gmail.com', 2, 8, 'good movie');
+(26, 33, 'raju@gmail.com', 2, 8, 'good movie'),
+(27, 1, 'surendra@gmail.com', 0, 8, 'very good');
 
 -- --------------------------------------------------------
 
@@ -97,7 +99,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`sl`, `name`, `email`, `password`, `role`) VALUES
 (1, 'admin', 'admin@gmail.com', 'admin', 1),
 (8, 'raju', 'raju@gmail.com', '123', 2),
-(9, 'Ghouse', 'ghouse@gmail.com', '123', 0);
+(9, 'Ghouse', 'ghouse@gmail.com', '123', 0),
+(10, 'surendra', 'surendra@gmail.com', '9390566696', 0);
 
 -- --------------------------------------------------------
 
@@ -147,19 +150,19 @@ ALTER TABLE `watchlist`
 -- AUTO_INCREMENT for table `movie`
 --
 ALTER TABLE `movie`
-  MODIFY `sl` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `sl` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `review`
 --
 ALTER TABLE `review`
-  MODIFY `sl` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `sl` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `sl` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `sl` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `watchlist`
